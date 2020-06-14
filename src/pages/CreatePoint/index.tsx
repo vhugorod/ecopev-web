@@ -10,7 +10,7 @@ import Dropzone from '../../components/Dropzone';
 
 import './styles.css';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 
 interface Item {
   id: number;
@@ -154,7 +154,7 @@ const CreatePoint = () => {
   return (
     <div id="page-create-point">
       <header>
-        <img src={logo} alt="Ecopev"/>
+        <img src={logo} width={180} alt="Ecopev"/>
 
         <Link to="/">
           <FiArrowLeft />

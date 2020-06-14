@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 
 import './styles.css';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 
 const Home = () => {
   return (
     <div id="page-home">
       <div className="content">
         <header>
-          <img src={logo} alt="Ecopev" />
+          <img src={logo} width={180} alt="Instituto Agronelli" />
         </header>
 
         <main>
-          <h1>Seu marketplace de coleta de resíduos.</h1>
+          <h1>Reutilizar, Reduzir e Reciclar.</h1>
           <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
 
           <Link to="/create-point">
