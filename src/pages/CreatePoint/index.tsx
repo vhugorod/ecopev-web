@@ -154,7 +154,7 @@ const CreatePoint = () => {
   return (
     <div id="page-create-point">
       <header>
-        <img src={logo} width={180} alt="Ecopev"/>
+        <img src={logo} width={180} alt="EcoPev"/>
 
         <Link to="/">
           <FiArrowLeft />
@@ -163,7 +163,7 @@ const CreatePoint = () => {
       </header>
 
       <form onSubmit={handleSubmit}>
-        <h1>Cadastro do <br />ponto de coleta</h1>
+        <h1>Cadastro do ponto de coleta</h1>
 
         <Dropzone onFileUploaded={setSelectedFile} />
 
@@ -194,7 +194,7 @@ const CreatePoint = () => {
               />
             </div>
             <div className="field">
-              <label htmlFor="whatsapp">Whatsapp</label>
+              <label htmlFor="whatsapp">Telefone</label>
               <input 
                 type="text"
                 name="whatsapp"
