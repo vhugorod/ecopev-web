@@ -174,7 +174,7 @@ const CreatePoint = () => {
         </fieldset>
 
         <div className="field">
-            <label htmlFor="name">Nome da entidade</label>
+            <label htmlFor="name">Nome do ponto</label>
             <input 
               type="text"
               name="name"
@@ -264,7 +264,7 @@ const CreatePoint = () => {
                 onClick={() => handleSelectItem(item.id)}
                 className={selectedItems.includes(item.id) ? 'selected' : ''}
               >
-                <img src={item.image_url} alt={item.title} />
+                <img className="items-svg" src={item.image_url} alt={item.title} />
                 <span>{item.title}</span>
               </li>
             ))}
