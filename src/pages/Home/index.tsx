@@ -15,7 +15,7 @@ const Home = () => {
         </header>
 
         <main>
-          <h1>Reutilizar, Reduzir e Reciclar.</h1>
+          <h1>Reutilizar, Reduzir e Reciclar</h1>
           <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
 
           <Link to="/create-point">

@@ -35,8 +35,9 @@ const CreatePoint = () => {
 
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    expedient: '',
     whatsapp: '',
+    recommendations: '',
   })
 
   const [selectedUf, setSelectedUf] = useState('0');
@@ -123,7 +124,7 @@ const CreatePoint = () => {
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
-    const { name, email, whatsapp } = formData;
+    const { name, expedient, whatsapp, recommendations } = formData;
     const uf = selectedUf;
     const city = selectedCity;
     const [latitude, longitude] = selectedPosition;
@@ -132,8 +133,9 @@ const CreatePoint = () => {
     const data = new FormData();
 
     data.append('name', name);
-    data.append('email', email);
+    data.append('expedient', expedient);
     data.append('whatsapp', whatsapp);
+    data.append('recommendations', recommendations);
     data.append('uf', uf);
     data.append('city', city);
     data.append('latitude', String(latitude));
@@ -174,22 +176,22 @@ const CreatePoint = () => {
         </fieldset>
 
         <div className="field">
-            <label htmlFor="name">Nome do ponto</label>
-            <input 
-              type="text"
-              name="name"
-              id="name"
-              onChange={handleInputChange}
-            />
-          </div>
+          <label htmlFor="name">Nome do ponto</label>
+          <input 
+            type="text"
+            name="name"
+            id="name"
+            onChange={handleInputChange}
+          />
+        </div>
 
           <div className="field-group">
             <div className="field">
-              <label htmlFor="email">E-mail</label>
+              <label htmlFor="expedient">Dia e horário de entrega</label>
               <input 
-                type="email"
-                name="email"
-                id="email"
+                type="text"
+                name="expedient"
+                id="expedient"
                 onChange={handleInputChange}
               />
             </div>
@@ -270,6 +272,16 @@ const CreatePoint = () => {
             ))}
           </ul>
         </fieldset>
+
+        <div className="field">
+          <label htmlFor="recommendations">Recomendações</label>
+          <input 
+            type="text"
+            name="recommendations"
+            id="recommendations"
+            onChange={handleInputChange}
+          />
+        </div>
 
         <button type="submit">
           Cadastrar ponto de coleta
